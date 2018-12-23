@@ -1,22 +1,43 @@
 import React, { Component } from 'react';
 import './banner.css';
+import './loader.css';
 import {connect} from 'react-redux';
 
 
 
 class Banner extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {imageLoaded : true, style : "hidden"};
+    }
+
+    imageLoadHandler = () =>{
+        this.setState({imageLoaded : true,style : "visible"});
+    }
     clickHandler = () => {
         //hit async call
+        this.setState({imageLoaded : false,style : "hidden"});
         this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
     }
     render() {
         //console.log("Properties: ",this.props);
         return (
-        <div className="banner">
-            <img alt="Harvard Art Museum" src={this.props.imageSource}/>
-            <button onClick={this.clickHandler}>Change Image</button>
-        </div>
+            <div className="pos-relative">
+                <div className="banner">
+                            <img className={this.state.style} alt="Harvard Art Museum" src={this.props.imageSource} onLoad={this.imageLoadHandler} />
+                            <div className="container" onClick={this.clickHandler}><a className="btn" href="#">Change Image</a></div>
+                </div>
+                {
+                    this.state.imageLoaded ? 
+                    null
+                    : 
+                    <div className="hollowLoader">
+                        <div className="largeBox"></div>
+                        <div className="smallBox"></div>
+                    </div>
+                }
+            </div>
         );
     }
 }
