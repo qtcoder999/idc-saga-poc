@@ -12,7 +12,7 @@ function fetchLinksFromServer(){
 function* fetchImages(action) {
    try {
       const links = yield call(fetchLinksFromServer);
-      const imageSource = links.records[0].baseimageurl + "&width=150";
+      const imageSource = links.records[0].baseimageurl;
     //   console.log("Links got from the API", links);
       yield put({type: "UPDATE_IMAGE_URL", imageSource});
    } catch (e) {
