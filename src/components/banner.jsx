@@ -7,11 +7,11 @@ import {connect} from 'react-redux';
 class Banner extends Component {
 
     clickHandler = () => {
-        this.props.dispatch({type: 'UPDATE_IMAGE_URL', imageSource:'https://nrs.harvard.edu/urn-3:HUAM:77665_dynmc'});
         //hit async call
+        this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
     }
     render() {
-        console.log("Properties: ",this.props);
+        //console.log("Properties: ",this.props);
         return (
         <div className="banner">
             <img alt="Harvard Art Museum" src={this.props.imageSource}/>
