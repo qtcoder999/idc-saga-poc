@@ -1,13 +1,21 @@
-
+.hidden{
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
+}
+.pos-relative{
+  position: relative;
+}
   .hollowLoader {
     width: 3em;
     height: 3em;
-    -webkit-animation: loaderAnim 1.25s infinite ease-in-out;
-            animation: loaderAnim 1.25s infinite ease-in-out;
+    -webkit-animation: loaderAnim 0.5s infinite ease-in-out;
+            animation: loaderAnim 0.5s infinite ease-in-out;
     outline: 1px solid transparent;
     position: absolute;
     top:50%;
-    left: 44%;
+    left: 48%;
     transform: translate(-50%,-50%);
   }
   .hollowLoader .largeBox {

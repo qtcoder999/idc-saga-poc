@@ -1,6 +1,6 @@
 const initialState = 
 {
-    imageSource : 'https://ids.lib.harvard.edu/ids/view/18788797'
+    imageSource : ''
 }
 
 const rootReducer = (state = initialState, action) => {

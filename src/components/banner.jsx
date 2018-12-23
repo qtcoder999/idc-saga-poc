@@ -9,9 +9,11 @@ class Banner extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {imageLoaded : true, style : "hidden"};
+        this.state = {imageLoaded : false, style : "hidden"};
     }
-
+    componentWillMount = () => {
+        this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
+    }
     imageLoadHandler = () =>{
         this.setState({imageLoaded : true,style : "visible"});
     }
@@ -23,7 +25,7 @@ class Banner extends Component {
     render() {
         //console.log("Properties: ",this.props);
         return (
-            <div className="pos-relative">
+            <div className="">
                 <div className="banner">
                             <img className={this.state.style} alt="Harvard Art Museum" src={this.props.imageSource} onLoad={this.imageLoadHandler} />
                             <div className="container" onClick={this.clickHandler}><a className="btn" href="#">Change Image</a></div>

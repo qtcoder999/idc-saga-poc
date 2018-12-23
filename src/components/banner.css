@@ -4,26 +4,16 @@
     height: 500px;
     margin: 0 auto;
 }
-.hidden{
-    visibility: hidden;
-}
-.visible{
-    visibility: visible;
-}
-.pos-relative{
-    position: relative;
-}
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 * {
   box-sizing: border-box;
 }
-
 body, html {
   height: 100%;
 }
-
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #111111;
   display: flex;
   align-items: center;
@@ -93,30 +83,30 @@ a {
   outline: none;
   font-size: 14px;
   color: #111111;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+  /* transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s; */
 }
 .btn::after, .btn::before {
   content: "";
   position: absolute;
   height: 40%;
   width: 10%;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   z-index: -2;
   border-radius: 50%;
 }
 .btn::before {
-  background-color: #c92918;
+  background-color: #3f82d7;
   top: 0rem;
   left: 0.5rem;
   -webkit-animation: top 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
           animation: top 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
 }
 .btn::after {
-  background-color: #e74c3c;
+  background-color: #3f82d7;
   top: 2rem;
   left: 13rem;
-  -webkit-animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
-          animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+  -webkit-animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s infinite alternate;
+          animation: bottom 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s infinite alternate;
 }
 .btn:hover {
   color: white;
