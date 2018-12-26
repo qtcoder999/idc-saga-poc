@@ -3,8 +3,6 @@ import './banner.css';
 import './loader.css';
 import {connect} from 'react-redux';
 
-
-
 class Banner extends Component {
 
     constructor(props) {
@@ -23,7 +21,7 @@ class Banner extends Component {
         this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
     }
     render() {
-        //console.log("Properties: ",this.props);
+        console.log("Properties: ",this.props);
         return (
             <div className="">
                 <div className="banner">
@@ -47,7 +45,7 @@ class Banner extends Component {
 
 const mapStateToProps = (state) => {
     return {
-         ...state
+         ...state.imageReducer
     };
   }
 const mapDispatchToProps = (dispatch) => {
