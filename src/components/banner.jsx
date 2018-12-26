@@ -21,12 +21,11 @@ class Banner extends Component {
         this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     render() {
-        console.log("Properties: ",this.props);
         return (
             <div className="">
                 <div className="banner">
                             <img className={this.state.style} alt="Harvard Art Museum" src={this.props.imageSource} onLoad={this.imageLoadHandler} />
-                            <div className="container" onClick={this.clickHandler}><button class="btn draw-border">Change Image</button></div>
+                            <div className="container" onClick={this.clickHandler}><button className="btn draw-border">Change Image</button></div>
                 </div>
                 {
                     this.state.imageLoaded ? 
@@ -44,7 +43,6 @@ class Banner extends Component {
 
 
 const mapStateToProps = (state) => {
-    console.log("Store:",state);
     return {
          ...state.imageReducer
     };
