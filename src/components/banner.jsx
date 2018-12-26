@@ -10,7 +10,7 @@ class Banner extends Component {
         this.state = {imageLoaded : false, style : "hidden"};
     }
     componentWillMount = () => {
-        this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
+        this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     imageLoadHandler = () =>{
         this.setState({imageLoaded : true,style : "visible"});
@@ -18,7 +18,7 @@ class Banner extends Component {
     clickHandler = () => {
         //hit async call
         this.setState({imageLoaded : false,style : "hidden"});
-        this.props.dispatch({type: 'IMAGE_FETCH_REQUESTED'});
+        this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     render() {
         console.log("Properties: ",this.props);
@@ -26,7 +26,7 @@ class Banner extends Component {
             <div className="">
                 <div className="banner">
                             <img className={this.state.style} alt="Harvard Art Museum" src={this.props.imageSource} onLoad={this.imageLoadHandler} />
-                            <div className="container" onClick={this.clickHandler}><a className="btn" href="#">Change Image</a></div>
+                            <div className="container" onClick={this.clickHandler}><button class="btn draw-border">Change Image</button></div>
                 </div>
                 {
                     this.state.imageLoaded ? 
@@ -44,6 +44,7 @@ class Banner extends Component {
 
 
 const mapStateToProps = (state) => {
+    console.log("Store:",state);
     return {
          ...state.imageReducer
     };

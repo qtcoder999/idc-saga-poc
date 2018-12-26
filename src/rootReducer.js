@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 import imageReducer from './containers/reducer';
 
 export default combineReducers({
