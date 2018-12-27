@@ -28,9 +28,9 @@ class Banner extends Component {
                             <div className="container" onClick={this.clickHandler}><button className="btn draw-border">Change Image</button></div>
                 </div>
                 {
-                    this.state.imageLoaded ? 
+                    this.state.imageLoaded ?
                     null
-                    : 
+                    :
                     <div className="hollowLoader">
                         <div className="largeBox"></div>
                         <div className="smallBox"></div>
@@ -43,10 +43,11 @@ class Banner extends Component {
 
 
 const mapStateToProps = (state) => {
+    //console.log({...state.get('imageReducer').toJS()});
     return {
-         ...state.imageReducer
+        ...state.get('imageReducer').toJS()
     };
-  }
+}
 const mapDispatchToProps = (dispatch) => {
     return {
         dispatch
