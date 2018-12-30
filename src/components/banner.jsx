@@ -10,7 +10,7 @@ class Banner extends Component {
         this.state = {imageLoaded : false, style : "hidden"};
     }
     componentWillMount = () => {
-        this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
+         this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     imageLoadHandler = () =>{
         this.setState({imageLoaded : true,style : "visible"});
@@ -25,7 +25,7 @@ class Banner extends Component {
             <div className="">
                 <div className="banner">
                             <img className={this.state.style} alt="Harvard Art Museum" src={this.props.imageSource} onLoad={this.imageLoadHandler} />
-                            <div className="container" onClick={this.clickHandler}><button className="btn-1 draw-border">Change Image</button></div>
+                            <div className="mt-2" onClick={this.clickHandler}><button className="btn-1 draw-border">Change Image</button></div>
                 </div>
                 {
                     this.state.imageLoaded ?
