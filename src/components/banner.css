@@ -5,7 +5,7 @@
 }
 .banner img {
   display: table;
-  min-height: 80vh;
+  min-height: 30vh;
   max-width: 100%;
   max-height: -webkit-calc(100vh - 6em);
   max-height: -moz-calc(100vh - 6em);
