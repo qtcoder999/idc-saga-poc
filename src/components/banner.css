@@ -77,9 +77,7 @@
   font: 700 -webkit-calc(1.2rem * 0.8) "Roboto Slab",sans-serif;
   font: 700 -moz-calc(1.2rem * 0.8) "Roboto Slab",sans-serif;
   font: 700 calc(1.2rem * 0.8) "Roboto Slab",sans-serif;
-  padding: -webkit-calc((1em 2em) * 0.8);
-  padding: -moz-calc((1em 2em) * 0.8);
-  padding: calc((1em 2em) * 0.8);
+  padding: 0.8em 1.6em;
   letter-spacing: .05rem;
 }
 body {
