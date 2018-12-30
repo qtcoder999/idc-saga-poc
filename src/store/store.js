@@ -1,21 +1,31 @@
-import {createStore, applyMiddleware, compose} from 'redux';
-import createSagaMiddleware from 'redux-saga'
+import { createStore, applyMiddleware, compose } from "redux";
+import createSagaMiddleware from "redux-saga";
+import rootReducer from "../rootReducer";
+import mySaga from "../containers/sagas";
+import { createLogger } from "redux-logger";
 
-import rootReducer from '../rootReducer';
+const logger = createLogger({
+  collapsed: true,
+  stateTransformer: state => state.toJS()
+});
 
-import mySaga from '../containers/sagas'
+let middleware;
 
 // create the saga middleware
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
+middleware = [sagaMiddleware, logger];
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(...middleware))
+);
 
 // then run the saga
-sagaMiddleware.run(mySaga)
+sagaMiddleware.run(mySaga);
 
 // render the application
 
 export default store;
-
