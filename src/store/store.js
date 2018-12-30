@@ -1,12 +1,14 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "../rootReducer";
-import mySaga from "../containers/sagas";
+import imageSaga from "../containers/sagas";
 import { createLogger } from "redux-logger";
 
 const logger = createLogger({
-  collapsed: true,
-  stateTransformer: state => state.toJS()
+    logErrors: true,
+    stateTransformer: state => state.toJS(),
+    diff: true,
+    collapsed: false
 });
 
 let middleware;
@@ -24,8 +26,6 @@ const store = createStore(
 );
 
 // then run the saga
-sagaMiddleware.run(mySaga);
-
-// render the application
+sagaMiddleware.run(imageSaga);
 
 export default store;

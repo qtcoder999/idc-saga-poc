@@ -26,8 +26,8 @@ function* fetchImages(action) {
      }
 }
 
-function* mySaga() {
+function* imageSaga() {
   yield takeLatest(FETCH_IMAGE_ASYNC, fetchImages);
 }
 
-export default mySaga;
+export default imageSaga;
