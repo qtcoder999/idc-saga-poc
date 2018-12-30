@@ -14,7 +14,7 @@ const imageReducer = (state = initialState, action) => {
         // case FETCH_IMAGE_SUCCESS: return Object.assign({}, newState, {imageSource: fromJS(action.imageSource)})
         // case FETCH_IMAGE_ERROR: return Object.assign({}, newState, {imageSource: fromJS('')})
         case FETCH_IMAGE_SUCCESS:
-            return state.set('imageSource' , action.imageSource )
+            return state.set('imageSource' , action.imageSource)
         case FETCH_IMAGE_ERROR:
             return state.set('imageSource', '')
         default : return state;

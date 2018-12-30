@@ -41,7 +41,6 @@ class Banner extends Component {
     }
 }
 
-
 const mapStateToProps = (state) => {
     return {
         ...state.get('imageReducer').toJS()
