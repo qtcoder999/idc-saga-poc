@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './banner.css';
-import './loader.css';
 
 class Banner extends Component {
 
