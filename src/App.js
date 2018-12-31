@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import BannerDetails from './containers/BannerDetails/BannerDetails';
-import CounterDetails from './containers/CounterDetails/CounterDetails'
+import BannerDetails from './containers/bannerDetails/bannerDetails';
+import CounterDetails from './containers/counterDetails/counterDetails'
 
 class App extends Component {
   render() {
