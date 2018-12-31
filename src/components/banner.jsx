@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './banner.min.css';
 
-class Banner extends Component {
+export default class Banner extends Component {
 
     constructor(props) {
         super(props);
         this.state = {imageLoaded : false, style : "hidden"};
     }
     componentWillMount = () => {
-         this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
+        this.props.asyncFetch();
+        // this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     imageLoadHandler = () =>{
         this.setState({imageLoaded : true,style : "visible"});
     }
     clickHandler = () => {
-        //hit async call
         this.setState({imageLoaded : false,style : "hidden"});
-        this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
+        this.props.asyncFetch();
+        // this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     render() {
+        // console.log(this.props);
         return (
             <div className="">
                 <div className="banner">
@@ -41,15 +42,3 @@ class Banner extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        ...state.get('imageReducer').toJS()
-    };
-}
-const mapDispatchToProps = (dispatch) => {
-    return {
-        dispatch
-    };
-};
-
-export default connect(mapStateToProps,mapDispatchToProps)(Banner);

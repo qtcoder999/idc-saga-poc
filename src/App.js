@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import BannerContainer from './components/banner'
+import BannerContainer from './containers/BannerDetails';
 
 class App extends Component {
   render() {

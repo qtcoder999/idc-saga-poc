@@ -11,7 +11,6 @@ function fetchLinksFromServer(){
     //Generate a random number between 1 to 362802
     var randomNumber = Math.floor(Math.random() * 362802) + 1;  
     let jsonResponse = fetch("https://api.harvardartmuseums.org/Image?size=1&page="+ randomNumber + "&apikey=6802de50-0503-11e9-8fc2-7765c49b991f").then(response => response.json());
-    // jsonResponse = jsonResponse.json();
     return jsonResponse;
 }
 
@@ -22,7 +21,6 @@ function* fetchImages(action) {
       yield put({type: FETCH_IMAGE_SUCCESS, imageSource});
    } catch (e) {
       yield put({type: FETCH_IMAGE_ERROR, imageSource:''});
-      // yield put({type: "USER_FETCH_FAILED", message: e.message});
      }
 }
 
