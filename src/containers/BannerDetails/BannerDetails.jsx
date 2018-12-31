@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchImageAsync} from './actions'
+import {fetchImageAsync} from './Actions'
 import Banner from '../../components/Banner/Banner'
 import {createSelector} from 'reselect'
 

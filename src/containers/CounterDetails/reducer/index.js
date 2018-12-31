@@ -3,7 +3,7 @@ import { fromJS } from 'immutable';
 // import {
 //     FETCH_IMAGE_SUCCESS,
 //     FETCH_IMAGE_ERROR
-//   } from './constants';
+//   } from './Constants';
 
 const initialState = fromJS({
     counter : 0

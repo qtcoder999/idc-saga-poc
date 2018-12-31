@@ -2,7 +2,7 @@ import {
     FETCH_IMAGE_ASYNC,
     FETCH_IMAGE_SUCCESS,
     FETCH_IMAGE_ERROR,
-} from './constants'
+} from './Constants'
 
 export function fetchImageSuccess(imageSource){
     return {type: FETCH_IMAGE_SUCCESS, imageSource}
