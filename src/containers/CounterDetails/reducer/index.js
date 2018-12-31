@@ -11,13 +11,12 @@ const initialState = fromJS({
 
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'INCREMENT':{
-      //alert("Inside reducer");
-      return state.set('counter', state.get('counter') + 1)}
+    case 'INCREMENT':
+      return state.set('counter', state.get('counter') + 1);
     case 'DECREMENT':
-      return state.set('counter', state.get('counter') - 1)
+      return state.set('counter', state.get('counter') - 1);
     default:
-      return state
+      return state;
   }
 }
 

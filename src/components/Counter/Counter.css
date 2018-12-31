@@ -4,3 +4,8 @@
 .add-margin-top{
     margin-top: 10px; 
 }
+.btn{
+    background: white;
+    margin: 10px;
+    font-size: 18px;
+}

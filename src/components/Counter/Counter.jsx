@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Counter.css'
 
 export default class Counter extends Component {
@@ -26,14 +27,15 @@ export default class Counter extends Component {
     return (
       <div className="color-white add-margin-top">
           Clicked: {this.props.counter} times
-          
-          <button onClick={this.increment}>
-            +
-          </button>
-          
-          <button onClick={this.decrement}>
-            -
-          </button>
+          <div>
+              <button className="btn btn-default" onClick={this.increment}>
+                +
+              </button>
+              
+              <button className="btn btn-default" onClick={this.decrement}>
+                -
+              </button>
+          </div>
       </div>
     )
   }
