@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import {fetchImageAsync} from '../containers/actions'
 import Banner from '../components/banner'
+import {createSelector} from 'reselect'
 
 const BannerDetails = () =>{
         return (
             <Banner {...this.props}/>
         )
 }
+
+// const imageListing = createSelector();
 
 const mapStateToProps = (state) => {
     return {
