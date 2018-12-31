@@ -1,12 +1,12 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import "./Actions";
+import "./actions";
 import axios from "axios";
 
 import {
   FETCH_IMAGE_ASYNC,
   FETCH_IMAGE_SUCCESS,
   FETCH_IMAGE_ERROR
-} from "./Constants";
+} from "./constants";
  
 function fetchLinksFromServer() {
   //Generate a random number between 1 to 362802

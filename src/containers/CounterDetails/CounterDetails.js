@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from '../../components/Counter/Counter'
+import Counter from '../../components/Counter/counter'
 import { connect } from "react-redux";
 import {toJS} from 'immutable'
 

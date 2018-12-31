@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Banner.min.css';
+import './banner.min.css';
 
 export default class Banner extends Component {
     constructor(props) {

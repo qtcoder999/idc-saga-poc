@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Counter.css'
+import './counter.css'
 
 export default class Counter extends Component {
   constructor(props) {
