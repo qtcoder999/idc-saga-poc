@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchImageAsync} from './actions'
-import Banner from '../../components/Banner/banner'
+import Banner from '../../components/Banner/Banner'
 import {createSelector} from 'reselect'
 
 const BannerDetails = (props) =>{
