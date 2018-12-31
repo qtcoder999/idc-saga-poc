@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './banner.min.css';
 
 export default class Banner extends Component {
-
     constructor(props) {
         super(props);
         this.state = {imageLoaded : false, style : "hidden"};
@@ -41,4 +40,3 @@ export default class Banner extends Component {
         );
     }
 }
-
