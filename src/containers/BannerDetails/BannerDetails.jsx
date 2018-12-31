@@ -14,7 +14,7 @@ const BannerDetails = (props) =>{
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('imageReducer').toJS()
+        ...state.get('imageCounterReducer').toJS()
     };
 }
 const mapDispatchToProps = (dispatch) => {

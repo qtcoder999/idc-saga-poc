@@ -6,10 +6,11 @@ import {
   } from './constants';
 
 const initialState = fromJS({
-    imageSource : ''
+    imageSource : '',
+    counter: 0
 });
 
-const imageReducer = (state = initialState, action) => {
+const imageCounterReducer = (state = initialState, action) => {
     switch(action.type){
         // case FETCH_IMAGE_SUCCESS: return Object.assign({}, newState, {imageSource: fromJS(action.imageSource)})
         // case FETCH_IMAGE_ERROR: return Object.assign({}, newState, {imageSource: fromJS('')})
@@ -17,8 +18,12 @@ const imageReducer = (state = initialState, action) => {
             return state.set('imageSource' , action.imageSource)
         case FETCH_IMAGE_ERROR:
             return state.set('imageSource', '')
+        case 'INCREMENT':
+            return state.set('counter', state.get('counter') + 1);
+        case 'DECREMENT':
+            return state.set('counter', state.get('counter') - 1);
         default : return state;
     }
 }
 
-export default imageReducer;
+export default imageCounterReducer;
