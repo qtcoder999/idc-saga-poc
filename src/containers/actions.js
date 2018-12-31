@@ -1,19 +1,15 @@
 import {
-
-
+    FETCH_IMAGE_ASYNC,
+    FETCH_IMAGE_SUCCESS,
+    FETCH_IMAGE_ERROR,
 } from './constants'
 
-
-
-// export function fetchImageAsync(){
-//     return {type: 'IMAGE_FETCH_REQUESTED'}
-// }
 export function fetchImageSuccess(imageSource){
-    return {type: "UPDATE_IMAGE_URL_SUCCESS", imageSource}
+    return {type: FETCH_IMAGE_SUCCESS, imageSource}
 }
 export function fetchImageAsync(){
-    return {type: "UPDATE_IMAGE_URL_ASYNC"}
+    return {type: FETCH_IMAGE_ASYNC}
 }
 export function fetchImageError(){
-    return {type: "UPDATE_IMAGE_URL_ERROR", imageSource : ''}
+    return {type: FETCH_IMAGE_ERROR, imageSource : ''}
 }
