@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import BannerDetails from './containers/bannerDetails/bannerDetails';
-import CounterDetails from './containers/counterDetails/counterDetails'
+import Bannerdetails from './containers/bannerdetails/bannerdetails';
+import CounterDetails from './containers/counterdetails/counterdetails'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <BannerDetails/>
+          <Bannerdetails/>
           <CounterDetails/>
       </div>
     );

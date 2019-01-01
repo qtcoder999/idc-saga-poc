@@ -4,7 +4,7 @@ import {fetchImageAsync} from './actions'
 import Banner from '../../components/banner/banner'
 import {createSelector} from 'reselect'
 
-const BannerDetails = (props) =>{
+const bannerdetails = (props) =>{
         return (
             <Banner {...this.props}/>
         )
