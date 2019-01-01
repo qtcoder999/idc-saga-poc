@@ -21,6 +21,7 @@ export default class Banner extends Component {
     }
     render() {
         console.log("Image Props", this.props);
+        this.props.asyncFetch();
         return (
             <div className="">
                 <div className="banner">
