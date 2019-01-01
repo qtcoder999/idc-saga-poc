@@ -1,13 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './counter.css'
 
 export default class Counter extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   increment = () => {
     this.props.dispatch({type: "INCREMENT"})
   }
@@ -22,7 +18,6 @@ export default class Counter extends Component {
 //   }
 
   render() {
-    const { counter, onIncrement, onDecrement } = this.props
     console.log("Counter props",this.props);
     return (
       <div className="color-white add-margin-top">

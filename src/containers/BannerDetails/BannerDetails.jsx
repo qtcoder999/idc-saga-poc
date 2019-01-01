@@ -2,11 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchImageAsync} from './actions'
 import Banner from '../../components/banner/banner'
-import {createSelector} from 'reselect'
+// import {createSelector} from 'reselect'
 
 const bannerdetails = (props) =>{
         return (
-            <Banner {...this.props}/>
+            <Banner {...props}/>
         )
 }
 
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(Banner);
+export default connect(mapStateToProps,mapDispatchToProps)(bannerdetails);

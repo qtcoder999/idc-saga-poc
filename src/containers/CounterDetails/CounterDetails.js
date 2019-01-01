@@ -1,12 +1,12 @@
 import React from 'react'
 import Counter from '../../components/counter/counter'
 import { connect } from "react-redux";
-import {toJS} from 'immutable'
 
-const CounterDetails = (props) =>{
-  return (
-      <Counter {...this.props}/>
-  )
+// const CounterDetails = (props) =>{
+//   return <Counter {...this.props}/>
+// }
+function CounterDetails(props) {
+  return <Counter {...props}/>
 }
 
 const mapStateToProps = (state) => {
@@ -23,4 +23,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(Counter);
+export default connect(mapStateToProps,mapDispatchToProps)(CounterDetails);
