@@ -20,8 +20,8 @@ export default class Banner extends Component {
         // this.props.dispatch({type: 'UPDATE_IMAGE_URL_ASYNC'});
     }
     render() {
-        console.log("Image Props", this.props);
-        this.props.asyncFetch();
+        console.log("Inside Banner component's render()");
+        console.log("Banner Props:", this.props);
         return (
             <div className="">
                 <div className="banner">

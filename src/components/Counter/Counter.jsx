@@ -18,6 +18,7 @@ export default class Counter extends Component {
 //   }
 
   render() {
+    console.log("Inside Counter component's render()");
     console.log("Counter props",this.props);
     return (
       <div className="color-white add-margin-top">
