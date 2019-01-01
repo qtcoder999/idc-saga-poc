@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "../rootReducer";
-import imageSaga from "../containers/bannerdetails/sagas.jsx";
+import imageSaga from "../containers/bannerdetails1/sagas";
 import { createLogger } from "redux-logger";
 
 const logger = createLogger({

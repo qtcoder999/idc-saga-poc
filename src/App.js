@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Bannerdetails from './containers/bannerdetails/bannerdetails';
+import Bannerdetails from './containers/bannerdetails1/bannerdetails1';
 import CounterDetails from './containers/counterdetails/counterdetails'
 
 class App extends Component {
