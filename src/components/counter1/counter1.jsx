@@ -11,12 +11,6 @@ export default class Counter extends Component {
     this.props.dispatch({type: "DECREMENT"})
   }
 
-//   incrementIfOdd() {
-//     if (this.props.counter % 2 !== 0) {
-//       this.props.onIncrement()
-//     }
-//   }
-
   render() {
     console.log("Inside Counter component's render()");
     console.log("Counter props",this.props);

@@ -2,9 +2,6 @@ import React from 'react'
 import Counter from '../../components/counter1/counter1'
 import { connect } from "react-redux";
 
-// const CounterDetails = (props) =>{
-//   return <Counter {...this.props}/>
-// }
 function CounterDetails(props) {
   return <Counter {...props}/>
 }
