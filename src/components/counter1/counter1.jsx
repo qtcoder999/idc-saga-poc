@@ -15,14 +15,14 @@ export default class Counter extends Component {
     console.log("Inside Counter component's render()");
     console.log("Counter props",this.props);
     return (
-      <div className="color-white add-margin-top">
+      <div className="color-white m-2">
           Clicked: {this.props.counter} times
           <div>
-              <button className="btn btn-default" onClick={this.increment}>
+              <button className="btn-1 draw-border m-2" onClick={this.increment}>
                 +
               </button>
               
-              <button className="btn btn-default" onClick={this.decrement}>
+              <button className="btn-1 draw-border m-2" onClick={this.decrement}>
                 -
               </button>
           </div>
