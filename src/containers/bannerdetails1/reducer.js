@@ -6,8 +6,7 @@ import {
   } from './constants';
 
 const initialState = fromJS({
-    imageSource : '',
-    counter: 0
+    imageSource : ''
 });
 
 const imageCounterReducer = (state = initialState, action) => {
@@ -18,10 +17,6 @@ const imageCounterReducer = (state = initialState, action) => {
             return state.set('imageSource' , action.imageSource)
         case FETCH_IMAGE_ERROR:
             return state.set('imageSource', '')
-        case 'INCREMENT':
-            return state.set('counter', state.get('counter') + 1);
-        case 'DECREMENT':
-            return state.set('counter', state.get('counter') - 1);
         default : return state;
     }
 }

@@ -21,7 +21,7 @@ export default class Banner extends Component {
     }
     render() {
         console.log("Inside Banner component's render()");
-        console.log("Banner Props:", this.props);
+        console.table(this.props);
         return (
             <div className="">
                 <div className="banner">
