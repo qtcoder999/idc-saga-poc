@@ -3,14 +3,15 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import { sinon } from "sinon";
-
-Enzyme.configure({ adapter: new Adapter() });
-
 import Banner from './components/banner/banner'
 import Counter from './components/counter1/counter1'
 
 import Bannerdetails from './containers/bannerdetails1/bannerdetails1';
 import CounterDetails from "./containers/counterdetails1/counterdetails1";
+
+Enzyme.configure({ adapter: new Adapter() });
+
+
 
 describe('Banner Details', () => {
   it('should render correctly in "debug" mode', () => {
@@ -54,6 +55,6 @@ describe('Counter Details',()=>
     //         //  sinon.assert.calledOnce(goSpy);
     //      tree.simulate('click');
     //      expect(onButtonClick).toBeCalled();
-       
+
     // })
 });
