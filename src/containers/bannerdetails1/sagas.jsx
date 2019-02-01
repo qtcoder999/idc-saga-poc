@@ -1,33 +1,12 @@
 import { call, put, takeLatest } from "redux-saga/effects";
 import "./actions";
-import axios from "axios";
+import { fetchLinksFromServer } from "./api";
 
 import {
   FETCH_IMAGE_ASYNC,
   FETCH_IMAGE_SUCCESS,
   FETCH_IMAGE_ERROR
 } from "./constants";
- 
-function fetchLinksFromServer() {
-  //Generate a random number between 1 to 362802
-  var randomNumber = Math.floor(Math.random() * 362802) + 1;
-  return axios
-    .get(
-      "https://api.harvardartmuseums.org/Image?size=1&page="+ randomNumber + "&apikey=6802de50-0503-11e9-8fc2-7765c49b991f"
-    ).then(function (response) {
-      return response.data;
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-
-  // let jsonResponse = fetch(
-  //   "https://api.harvardartmuseums.org/Image?size=1&page=" +
-  //     randomNumber +
-  //     "&apikey=6802de50-0503-11e9-8fc2-7765c49b991f"
-  // ).then(response => response.json());
-  // return jsonResponse;
-}
 
 function* fetchImages(action) {
   try {

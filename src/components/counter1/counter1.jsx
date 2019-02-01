@@ -21,7 +21,6 @@ export default class Counter extends Component {
               <button className="btn-1 draw-border m-2" onClick={this.increment}>
                 +
               </button>
-              
               <button className="btn-1 draw-border m-2" onClick={this.decrement}>
                 -
               </button>
